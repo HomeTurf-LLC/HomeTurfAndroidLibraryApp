@@ -1,0 +1,3 @@
+include ':hometurf'
+rootProject.name = "HomeTurfAndroidLibraryApp"
+include ':app'
