@@ -1,0 +1,3 @@
+[submodule "hometurf"]
+	path = hometurf
+	url = git@github.com:HomeTurf-LLC/HomeTurfAndroidLibrary.git
