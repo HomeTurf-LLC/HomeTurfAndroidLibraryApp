@@ -1,6 +1,6 @@
 # HomeTurf Android Library App
 
-Contains the HomeTurf Android library and releases (available for easy integration via JitPack.io). The library is publicly hosted for JitPack [here](https://github.com/HomeTurf-LLC/HomeTurfAndroidLibrary) and included in this project as a submodule. A public demo project that integrates the library via JitPack is available [here](https://github.com/HomeTurf-LLC/TestAndroidTeam).
+Contains the HomeTurf Android library and releases (available for easy integration via JitPack.io). The library is also available as a git submodule [here](https://github.com/HomeTurf-LLC/HomeTurfAndroidLibrary). A public demo project that integrates the library via JitPack is available [here](https://github.com/HomeTurf-LLC/TestAndroidTeam).
 
 ## Dependencies
 
