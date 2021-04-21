@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.application'
+    id 'com.google.firebase.appdistribution'
 }
 
 android {
@@ -19,7 +20,17 @@ android {
     }
 
     buildTypes {
+        debug {
+            firebaseAppDistribution {
+                groups="qa, developers"
+                appId="1:610374897597:android:bcff801c989c60d3e88cd4"
+            }
+        }
         release {
+            firebaseAppDistribution {
+                groups="qa, developers"
+                appId="1:610374897597:android:bcff801c989c60d3e88cd4"
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
