@@ -19,12 +19,12 @@ platform :android do
   desc "Upload to Firebase"
   lane :upload_to_firebase do
     increment_version_code(gradle_file_path: "app/build.gradle")
-    gradle(
-        task: "clean"
-    )
+#    gradle(
+#        task: "clean"
+#    )
     gradle(
         task: "assemble",
-        build_variant: "devAuth0Release",
+        flavor: "devAuth0",
         build_type: "Release"
     )
 
