@@ -24,7 +24,7 @@ platform :android do
 #    )
     gradle(
         task: "assemble",
-        flavor: "devAuth0",
+        flavor: "ciAuth0",
         build_type: "Release"
     )
 
