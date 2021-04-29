@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HomeTurfAndroidLibraryApp</string>
+    <string name="home_turf_use_auth0">false</string>
 </resources>

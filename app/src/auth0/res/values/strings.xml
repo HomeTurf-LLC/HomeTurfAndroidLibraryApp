@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_turf_com_auth0_client_id">sm2iY4OwL0Pcp2wfzY6X2MIPnO18awFN</string>
+    <string name="home_turf_com_auth0_domain">dev-p428fe5m.us.auth0.com</string>
+    <string name="home_turf_com_auth0_audience">https://api.hometurfapp.com/v1/api/</string>
+    <string name="home_turf_com_auth0_scheme">com.hometurf.android</string>
+    <string name="home_turf_use_auth0">true</string>
+</resources>

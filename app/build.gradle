@@ -1,6 +1,5 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.firebase.appdistribution'
 }
 
 android {
@@ -11,8 +10,8 @@ android {
         applicationId "com.hometurf.androidapp"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0.1"
+        versionCode 3
+        versionName "1.0.2"
 
         manifestPlaceholders = [auth0Domain: "@string/home_turf_com_auth0_domain", auth0Scheme: "@string/home_turf_com_auth0_scheme"]
 
@@ -20,21 +19,41 @@ android {
     }
 
     buildTypes {
-        debug {
-            firebaseAppDistribution {
-                groups="qa, developers"
-                appId="1:610374897597:android:bcff801c989c60d3e88cd4"
-            }
-        }
+        debug {}
         release {
-            firebaseAppDistribution {
-                groups="qa, developers"
-                appId="1:610374897597:android:bcff801c989c60d3e88cd4"
-            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    flavorDimensions "source", "login"
+    productFlavors {
+        dev {
+            dimension "source"
+        }
+        ci {
+            dimension "source"
+        }
+        smsOnly {
+            dimension "login"
+        }
+        auth0 {
+            dimension "login"
+        }
+    }
+
+    variantFilter { variant ->
+        def names = variant.flavors*.name
+        // To check for a certain build type, use variant.buildType.name == "<buildType>"
+        if (!names.contains("dev") && !names.contains("ci")) {
+            // Gradle ignores any variants that satisfy the conditions above.
+            setIgnore(true)
+        }
+        if (!names.contains("smsOnly") && !names.contains("auth0")) {
+            // Gradle ignores any variants that satisfy the conditions above.
+            setIgnore(true)
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
