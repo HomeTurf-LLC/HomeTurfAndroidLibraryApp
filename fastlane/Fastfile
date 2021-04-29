@@ -19,13 +19,13 @@ platform :android do
   desc "Upload to Firebase"
   lane :upload_to_firebase do
     increment_version_code(gradle_file_path: "app/build.gradle")
-#    gradle(
-#        task: "clean"
-#    )
+    gradle(
+        task: "clean"
+    )
     gradle(
         task: "assemble",
         flavor: "ciAuth0",
-        build_type: "Release"
+        build_type: "Debug"
     )
 
     firebase_app_distribution(
