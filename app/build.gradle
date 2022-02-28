@@ -11,7 +11,7 @@ android {
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 19
-        versionName "1.0.7"
+        versionName "1.0.8"
 
         manifestPlaceholders = [auth0Domain: "@string/home_turf_com_auth0_domain", auth0Scheme: "@string/home_turf_com_auth0_scheme"]
 
